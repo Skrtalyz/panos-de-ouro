@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Método Panos de Ouro - 200+ Modelos de Panos de Prato</title>
+    <script>
+      window.pixelId = "69cd9ae174bd528d59869555";
+      var a = document.createElement("script");
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script>
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-xcod-sck
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
+    <script>
+      function forceUTM() {
+        const search = window.location.search;
+        if (!search) return;
+        const cleanSearch = search.startsWith('?') ? search.substring(1) : search;
+        
+        const links = document.querySelectorAll('a[href*="checkout.php"], a[href*="pay.lowify.com.br"]');
+        links.forEach(link => {
+          let href = link.getAttribute('href');
+          if (href && !href.includes(cleanSearch)) {
+            const separator = href.includes('?') ? '&' : '?';
+            link.setAttribute('href', href + separator + cleanSearch);
+          }
+        });
+      }
+      
+      // Run on load and periodically to catch React-rendered links
+      window.addEventListener('DOMContentLoaded', forceUTM);
+      setInterval(forceUTM, 1000);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

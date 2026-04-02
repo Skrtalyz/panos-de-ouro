@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #E91E63; /* Rose Pink */
+  --color-primary-dark: #C2185B;
+  --color-secondary: #F8BBD0; /* Soft Pink */
+  --color-accent: #D4AF37; /* Gold */
+  --color-bg-soft: #FFF5F7; /* Very Light Pink/Cream */
+  --color-rose-gold: #B76E79;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-soft text-stone-800 font-sans antialiased text-sm md:text-base;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-sans font-bold tracking-tight;
+  }
+}
+
+.feminine-gradient {
+  background: linear-gradient(135deg, #E91E63 0%, #F06292 100%);
+}
+
+.soft-shadow {
+  box-shadow: 0 4px 20px -2px rgba(233, 30, 99, 0.08);
+}
+
+.card-border {
+  border: 1px solid rgba(233, 30, 99, 0.1);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
